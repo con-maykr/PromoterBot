@@ -1,2 +1,2 @@
-# json_parser_spike
-    make sure you install requests (`pip install requests`) on mac
+# get_event_data
+    returns event metadata for a given url. title, time, imageUrl

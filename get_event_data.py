@@ -1,6 +1,8 @@
 import requests
 import re
 
+# Sample usage: get_event_data("https://www.facebook.com/events/2817360921721103")
+
 
 def get_event_data(url):
 
@@ -17,5 +19,5 @@ def get_event_data(url):
     imageURL = re.search(
         r'class="scaledImageFitHeight img" src="([^"]+)"', r.text, flags=re.M | re.DOTALL).group(1).replace("&amp;", "&")
 
-    print(title, time, imageURL)
+  #  print(title, time, imageURL)
     return {title, time, imageURL}
