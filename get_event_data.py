@@ -18,6 +18,9 @@ def get_event_data(url):
         r'id="title_subtitle"><span aria-label="([^"]*)', r.text, flags=re.M | re.DOTALL).group(
         1)
 
+    # regularPatternImage = re.search(
+    #    r'class="scaledImageFitHeight img" src="([^"]+)"', r.text, flags=re.M | re.DOTALL)
+
     imageURL = re.search(
         r'class="scaledImageFitHeight img" src="([^"]+)"', r.text, flags=re.M | re.DOTALL).group(1).replace("&amp;", "&")
 
